@@ -1,0 +1,20 @@
+#sd_snowyday:
+#    resource: "@SDSnowydayBundle/Resources/config/routing.yml"
+#    prefix:   /
+
+#app:
+#    resource: "@AppBundle/Controller/"
+#    type:     annotation
+
+#app:
+#    type: rest
+#    resource: SD\SnowydayBundle\Controller\DefaultController
+
+locations:
+    type: rest
+    resource: SD\SnowydayBundle\Controller\LocationsController
+    
+greetings:
+    type: rest
+    resource: SD\SnowydayBundle\Controller\GreetingsController
+    
