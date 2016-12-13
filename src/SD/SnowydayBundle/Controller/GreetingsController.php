@@ -3,17 +3,19 @@
 namespace SD\SnowydayBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use FOS\RestBundle\Routing\ClassResourceInterface;
 
 /****************************************************************************/
 /* php bin/console debug:router                                             */
-/*  get_hello                  GET      ANY      ANY    /hello.{_format}    */
-/*  put_hello                  PUT      ANY      ANY    /hello.{_format}    */
-/* curl -X PUT -H "Accept:application/json" https://snowyday-man.c9users.io/web/app_dev.php/hello*/
+/* get_greetings_greetings    GET      ANY      ANY    /greetings/greetings.{_format} */
+/* put_greetings_hello        PUT      ANY      ANY    /greetings/hello.{_format} */
+/* curl -X GET -H "Accept:application/json" https://snowyday-man.c9users.io/web/app_dev.php/greetings/greetings */
+/* curl -X PUT -H "Accept:application/json" https://snowyday-man.c9users.io/web/app_dev.php/greetings/hello */
 /****************************************************************************/
 
-class GreetingsController 
+class GreetingsController implements ClassResourceInterface
 {
-    public function getHelloAction()
+    public function getGreetingsAction()
     {
          $identite = array(
           'nom' => 'getHelloAction', 
